@@ -1,31 +1,7 @@
-""" import psutil
-import win32gui
-import win32process
-
-def get_active_process_name():
-    win32gui.GetForegroundWindow()
-    hwnd = win32gui.GetForegroundWindow()
-    _, pid = win32process.GetWindowThreadProcessId(hwnd)
-    process = psutil.Process(pid)
-    print(pid)
-    return process.name()
-
-process_name = get_active_process_name()
-
-last_process = None
-
-while True:
-    current_process = get_active_process_name()
-
-    if current_process != last_process:
-        print(current_process)
-        last_process = current_process """
-
 import time
 import psutil
 import win32gui
 import win32process
-
 
 def get_active_process_name():
     hwnd = win32gui.GetForegroundWindow()
